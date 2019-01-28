@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 
 namespace c_sharp_project_back_end.Models
 {
-    public class Users
+    public class User
     {
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+
 
     }
 }
