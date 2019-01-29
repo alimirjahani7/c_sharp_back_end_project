@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using c_sharp_project_back_end.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace c_sharp_project_back_end
 {
     public class Startup
