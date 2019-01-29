@@ -13,7 +13,7 @@ namespace c_sharp_project_back_end.Models
         public int UserId { get; set; }
         public User User { get; set; }
         [ForeignKey("Post")]
-        public int PostId { get; set; }
+        public int? PostId { get; set; }
         public Post Post { get; set; }
     }
 }

@@ -29,7 +29,8 @@ namespace c_sharp_project_back_end
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<DataContext>(option =>
-            option.UseSqlServer(Configuration.GetConnectionString("DataContext"))
+                option.UseSqlServer(Configuration.GetConnectionString("DataContext"))
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

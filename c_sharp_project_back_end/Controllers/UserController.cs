@@ -16,14 +16,50 @@ namespace c_sharp_project_back_end.Controllers
         public UserController(DataContext _context)
         {
             context = _context;
+            //User u = new User();
+            //u.SignUpTime = DateTime.Now;
+            //u.Username = "Admin";
+            //u.Password = "asdfasdf";
+            //context.Users.Add(u);
+            //context.SaveChanges();
         }
 
-        // POST api/user/login
-        [Route("login")]
-        public void Post([FromBody] string value)
+        //gereftan tamame user ha
+        // POST api/user/
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-
+            return context.Users.ToList();
         }
+
+
+        //peida kardan user ba id
+        // GET api/Users/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUser(int id)
+        {
+            var user = await context.Users.FindAsync(id);
+            Console.WriteLine("asdaasd");
+            if (user == null)
+            {
+                return null;
+            }
+            return user;
+        }
+
+
+        //sakhte user e jadid
+        //POST api/values
+        [HttpPost]
+        public async Task<ActionResult<User>> PostUser(User user)
+        {
+            user.SignUpTime = DateTime.Now;
+            context.Users.Add(user);
+            await context.SaveChangesAsync();
+
+            return user;
+        }
+
 
         // PUT api/values/5
         [Route("signup")]

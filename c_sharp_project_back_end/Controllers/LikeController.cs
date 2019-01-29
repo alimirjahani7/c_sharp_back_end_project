@@ -19,15 +19,15 @@ namespace c_sharp_project_back_end.Controllers
         }
 
         // POST api/like/numberOflikes
-        [Route("numberOfLikes")]
-        public void Post([FromBody] string value)
+        [HttpGet("numberOfLikes")]
+        public void Post(int PostId)
         {
 
         }
 
         // Post api/likeUnlike
-        [Route("like")]
-        public void Put([FromBody] string value)
+        [HttpGet("like")]
+        public void Put(int PostId,int UserId)
         {
 
         }
