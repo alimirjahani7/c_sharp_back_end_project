@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace c_sharp_project_back_end.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class PostController
     {
         private readonly DataContext context;
@@ -22,7 +24,7 @@ namespace c_sharp_project_back_end.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
         {
-            return null;
+            return context.Posts.ToList();
             //return context.Posts.ToList();
         }
 
@@ -47,45 +49,15 @@ namespace c_sharp_project_back_end.Controllers
         [HttpPost]
         public async Task<ActionResult<Post>> PostPost(Post post)
         {
+            post.SendPostTime = DateTime.Now;
             context.Posts.Add(post);
-            await context.SaveChangesAsync();
-            return null;
-        }
-
-
-        //no idea
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutPost(long id, Post post)
-        {
-            if (id != post.Id)
-            {
-                return null;
-            }
-            context.Entry(post).State = EntityState.Modified;
-            await context.SaveChangesAsync();
-            return null;
-        }
-
-        //delete kardan yek post
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Post>> DeletePost(long id)
-        {
-            var post = await context.Posts.FindAsync(id);
-            if (post == null)
-            {
-                return null;
-            }
-            //TODO delete kardan e comment ha
-            context.Posts.Remove(post);
             await context.SaveChangesAsync();
             return post;
         }
 
         // comment haie ye post
         [HttpGet("{id}/comments")]
-        public async Task<ActionResult<IEnumerable<Comment>>> GetPostComments(long id)
+        public async Task<ActionResult<IEnumerable<Comment>>> GetPostComments(int id)
         {
             var post = await context.Posts.FindAsync(id);
             if (post == null)
@@ -98,7 +70,7 @@ namespace c_sharp_project_back_end.Controllers
 
         //yek comment e khas
         [HttpGet("{id}/comments/{id2}")]
-        public async Task<ActionResult<Comment>> GetPostComment(long id, long id2)
+        public async Task<ActionResult<Comment>> GetPostComment(int id, int id2)
         {
             var comment = await context.Comments.FindAsync(id2);
             if (comment == null)

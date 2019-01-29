@@ -34,12 +34,11 @@ namespace c_sharp_project_back_end.Controllers
 
 
         //peida kardan user ba id
-        // GET api/Users/5
+        // GET api/User/5
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await context.Users.FindAsync(id);
-            Console.WriteLine("asdaasd");
             if (user == null)
             {
                 return null;
@@ -47,9 +46,21 @@ namespace c_sharp_project_back_end.Controllers
             return user;
         }
 
+        //[HttpGet("id")]
+        //public async Task<ActionResult<User>> GetUser()
+        //{
+        //    var user = await context.Users.FindAsync(4);
+        //    Console.WriteLine("asdaasd");
+        //    if (user == null)
+        //    {
+        //        return null;
+        //    }
+        //    return user;
+        //}
+
 
         //sakhte user e jadid
-        //POST api/values
+        //POST api/user
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
@@ -59,15 +70,6 @@ namespace c_sharp_project_back_end.Controllers
 
             return user;
         }
-
-
-        // PUT api/values/5
-        [Route("signup")]
-        public void Put([FromBody] string value)
-        {
-
-        }
-
 
     }
 }

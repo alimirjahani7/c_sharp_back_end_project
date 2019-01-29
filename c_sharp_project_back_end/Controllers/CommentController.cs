@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace c_sharp_project_back_end.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CommentController
     {
         private readonly DataContext context;
@@ -38,12 +40,6 @@ namespace c_sharp_project_back_end.Controllers
         // POST api/comment
         [HttpPost]
         public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/comment/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
         {
         }
     }
