@@ -57,28 +57,15 @@ namespace c_sharp_project_back_end.Controllers
 
         // comment haie ye post
         [HttpGet("{id}/comments")]
-        public async Task<ActionResult<IEnumerable<Comment>>> GetPostComments(int id)
+        public async Task<List<Comment>> GetPostComments(int id)
         {
-            var post = await context.Posts.FindAsync(id);
+            Post post =  await context.Posts.FindAsync(id);
             if (post == null)
             {
                 return null;
             }
             return post.Comments.ToList();
+            
         }
-
-
-        //yek comment e khas
-        [HttpGet("{id}/comments/{id2}")]
-        public async Task<ActionResult<Comment>> GetPostComment(int id, int id2)
-        {
-            var comment = await context.Comments.FindAsync(id2);
-            if (comment == null)
-            {
-                return null;
-            }
-            return comment;
-        }
-
     }
 }

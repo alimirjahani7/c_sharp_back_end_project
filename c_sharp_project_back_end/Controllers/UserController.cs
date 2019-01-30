@@ -16,16 +16,10 @@ namespace c_sharp_project_back_end.Controllers
         public UserController(DataContext _context)
         {
             context = _context;
-            //User u = new User();
-            //u.SignUpTime = DateTime.Now;
-            //u.Username = "Admin";
-            //u.Password = "asdfasdf";
-            //context.Users.Add(u);
-            //context.SaveChanges();
         }
 
         //gereftan tamame user ha
-        // POST api/user/
+        // GET api/user/
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {

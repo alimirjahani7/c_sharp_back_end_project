@@ -26,7 +26,7 @@ namespace c_sharp_project_back_end.Controllers
 
         // GET api/comment/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Comment>> GetComment(long id)
+        public async Task<ActionResult<Comment>> GetComment(int id)
         {
             var comment = await context.Comments.FindAsync(id);
 
@@ -39,8 +39,15 @@ namespace c_sharp_project_back_end.Controllers
 
         // POST api/comment
         [HttpPost]
-        public void Post([FromBody]string value)
+        public async Task<ActionResult<Comment>> Post(Comment comment)
         {
+           // System.Diagnostics.Debug.WriteLine(log data here)
+            context.Comments.Add(comment);
+            Post post=await context.Posts.FindAsync(comment.PostId);
+            //post.Comments.Add(comment);
+            context.Posts.Update(post);
+            await context.SaveChangesAsync();
+            return comment;
         }
     }
 }

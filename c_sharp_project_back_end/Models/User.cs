@@ -11,7 +11,5 @@ namespace c_sharp_project_back_end.Models
         public string Username { get; set; }
         public string Password { get; set; }
         public DateTime SignUpTime { get; set; }
-        public virtual IList<Post> Posts { get; set; }
-
     }
 }
