@@ -43,9 +43,6 @@ namespace c_sharp_project_back_end.Controllers
         {
            // System.Diagnostics.Debug.WriteLine(log data here)
             context.Comments.Add(comment);
-            Post post=await context.Posts.FindAsync(comment.PostId);
-            //post.Comments.Add(comment);
-            context.Posts.Update(post);
             await context.SaveChangesAsync();
             return comment;
         }

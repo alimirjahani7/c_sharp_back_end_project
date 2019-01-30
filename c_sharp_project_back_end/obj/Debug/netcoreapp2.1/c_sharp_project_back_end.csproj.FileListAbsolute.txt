@@ -12,3 +12,17 @@ D:\Projects\c_sharp_project_back_end\c_sharp_project_back_end\bin\Debug\netcorea
 D:\Projects\c_sharp_project_back_end\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.RazorTargetAssemblyInfo.cache
 D:\Projects\c_sharp_project_back_end\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.dll
 D:\Projects\c_sharp_project_back_end\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.pdb
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\bin\Debug\netcoreapp2.1\c_sharp_project_back_end.deps.json
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\bin\Debug\netcoreapp2.1\c_sharp_project_back_end.runtimeconfig.json
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\bin\Debug\netcoreapp2.1\c_sharp_project_back_end.runtimeconfig.dev.json
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\bin\Debug\netcoreapp2.1\c_sharp_project_back_end.dll
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\bin\Debug\netcoreapp2.1\c_sharp_project_back_end.pdb
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.csprojAssemblyReference.cache
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.RazorAssemblyInfo.cache
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.RazorAssemblyInfo.cs
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.AssemblyInfo.cs
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.RazorTargetAssemblyInfo.cache
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.dll
+C:\Users\Asus\Desktop\c_sharp_back_end_project\c_sharp_project_back_end\obj\Debug\netcoreapp2.1\c_sharp_project_back_end.pdb

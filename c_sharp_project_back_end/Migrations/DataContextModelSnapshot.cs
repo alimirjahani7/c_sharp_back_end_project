@@ -29,13 +29,11 @@ namespace c_sharp_project_back_end.Migrations
 
                     b.Property<int>("PostId");
 
-                    b.Property<int?>("UserId");
+                    b.Property<int>("UserId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PostId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Comments");
                 });
@@ -46,15 +44,13 @@ namespace c_sharp_project_back_end.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("PostId");
+                    b.Property<int>("PostId");
 
                     b.Property<int>("UserId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PostId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Likes");
                 });
@@ -74,8 +70,6 @@ namespace c_sharp_project_back_end.Migrations
                     b.Property<int>("UserId");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Posts");
                 });
@@ -260,33 +254,17 @@ namespace c_sharp_project_back_end.Migrations
 
             modelBuilder.Entity("c_sharp_project_back_end.Models.Comment", b =>
                 {
-                    b.HasOne("c_sharp_project_back_end.Models.Post", "Post")
-                        .WithMany()
+                    b.HasOne("c_sharp_project_back_end.Models.Post")
+                        .WithMany("Comments")
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("c_sharp_project_back_end.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("c_sharp_project_back_end.Models.Like", b =>
                 {
-                    b.HasOne("c_sharp_project_back_end.Models.Post", "Post")
-                        .WithMany()
-                        .HasForeignKey("PostId");
-
-                    b.HasOne("c_sharp_project_back_end.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("c_sharp_project_back_end.Models.Post", b =>
-                {
-                    b.HasOne("c_sharp_project_back_end.Models.User")
-                        .WithMany("Posts")
-                        .HasForeignKey("UserId")
+                    b.HasOne("c_sharp_project_back_end.Models.Post")
+                        .WithMany("Likes")
+                        .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

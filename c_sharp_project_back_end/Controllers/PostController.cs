@@ -35,11 +35,6 @@ namespace c_sharp_project_back_end.Controllers
         public async Task<ActionResult<Post>> GetPost(long id)
         {
             var post = await context.Posts.FindAsync(id);
-
-            if (post == null)
-            {
-                return null;
-            }
             return post;
         }
 
@@ -57,15 +52,9 @@ namespace c_sharp_project_back_end.Controllers
 
         // comment haie ye post
         [HttpGet("{id}/comments")]
-        public async Task<List<Comment>> GetPostComments(int id)
+        public async Task<ActionResult<IEnumerable<Comment>>> GetPostComments(int id)
         {
-            Post post =  await context.Posts.FindAsync(id);
-            if (post == null)
-            {
-                return null;
-            }
-            return post.Comments.ToList();
-            
+            return context.Comments.Where(x => x.PostId == id).ToList();  
         }
     }
 }
