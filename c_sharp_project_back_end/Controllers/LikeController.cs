@@ -17,9 +17,18 @@ namespace c_sharp_project_back_end.Controllers
         {
             context = _context;
         }
+
+        [HttpGet()]
+        public async Task<ActionResult<IEnumerable<Like>>> GetAllLikes(int PostId)
+        {
+            return context.Likes.ToList();
+        }
+
+
         // get api/like/postId/numberOflikes
+
         [HttpGet("{PostId}/numberOfLikes")]
-        public int Post(int PostId)
+        public int GetNumber(int PostId)
         {
             return context.Likes.Where(x => x.PostId == PostId).ToList().Count;
         }

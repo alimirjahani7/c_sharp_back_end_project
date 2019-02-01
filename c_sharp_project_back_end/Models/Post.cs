@@ -13,7 +13,5 @@ namespace c_sharp_project_back_end.Models
         public int UserId { get; set; }
         public string FileName { get; set; }
         public DateTime SendPostTime { get; set; }
-        public virtual IList<Like> Likes { get; set; }
-        public IList<Comment> Comments { get; set; }
     }
 }
