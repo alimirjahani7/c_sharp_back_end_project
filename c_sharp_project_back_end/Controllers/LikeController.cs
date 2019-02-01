@@ -18,7 +18,7 @@ namespace c_sharp_project_back_end.Controllers
             context = _context;
         }
 
-        [HttpGet()]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<Like>>> GetAllLikes(int PostId)
         {
             return context.Likes.ToList();

@@ -20,7 +20,7 @@ namespace c_sharp_project_back_end.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<IEnumerable<string>>> Get()
         {
             var likes = context.Likes;
             foreach (var item in likes)
@@ -34,10 +34,10 @@ namespace c_sharp_project_back_end.Controllers
             foreach (var item in users)
                 context.Users.Remove(item);
 
-            var posts= context.Posts;
+            var posts = context.Posts;
             foreach (var item in posts)
                 context.Posts.Remove(item);
-
+            await context.SaveChangesAsync();
 
             return new string[] { "value1", "value2" };
         }
