@@ -41,7 +41,6 @@ namespace c_sharp_project_back_end.Controllers
         [HttpPost]
         public async Task<ActionResult<Comment>> Post(Comment comment)
         {
-           // System.Diagnostics.Debug.WriteLine(log data here)
             context.Comments.Add(comment);
             await context.SaveChangesAsync();
             return comment;

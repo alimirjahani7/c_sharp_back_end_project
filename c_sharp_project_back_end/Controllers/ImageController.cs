@@ -31,7 +31,7 @@ namespace c_sharp_project_back_end.Controllers
         //}
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<User>>> asdsadaasd()
         {
             return context.Users.ToList();
         }

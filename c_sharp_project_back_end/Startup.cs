@@ -28,6 +28,7 @@ namespace c_sharp_project_back_end
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors();
             services.AddDbContext<DataContext>(option =>
                 option.UseSqlServer(Configuration.GetConnectionString("DataContext"))
             );
@@ -44,7 +45,8 @@ namespace c_sharp_project_back_end
             {
                 app.UseHsts();
             }
-
+            app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            //.AllowAnyCredentials()
             app.UseHttpsRedirection();
             app.UseMvc();
         }

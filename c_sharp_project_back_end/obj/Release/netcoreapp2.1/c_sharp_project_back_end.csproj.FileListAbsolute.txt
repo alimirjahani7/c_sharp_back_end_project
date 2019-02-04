@@ -1,0 +1,14 @@
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\bin\Release\netcoreapp2.1\c_sharp_project_back_end.deps.json
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\bin\Release\netcoreapp2.1\c_sharp_project_back_end.runtimeconfig.json
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\bin\Release\netcoreapp2.1\c_sharp_project_back_end.runtimeconfig.dev.json
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\bin\Release\netcoreapp2.1\c_sharp_project_back_end.dll
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\bin\Release\netcoreapp2.1\c_sharp_project_back_end.pdb
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\obj\Release\netcoreapp2.1\c_sharp_project_back_end.csprojAssemblyReference.cache
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\obj\Release\netcoreapp2.1\c_sharp_project_back_end.csproj.CoreCompileInputs.cache
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\obj\Release\netcoreapp2.1\c_sharp_project_back_end.RazorAssemblyInfo.cache
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\obj\Release\netcoreapp2.1\c_sharp_project_back_end.RazorAssemblyInfo.cs
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\obj\Release\netcoreapp2.1\c_sharp_project_back_end.AssemblyInfoInputs.cache
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\obj\Release\netcoreapp2.1\c_sharp_project_back_end.AssemblyInfo.cs
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\obj\Release\netcoreapp2.1\c_sharp_project_back_end.RazorTargetAssemblyInfo.cache
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\obj\Release\netcoreapp2.1\c_sharp_project_back_end.dll
+D:\Projects\c_sharp_back_end_project\c_sharp_project_back_end\obj\Release\netcoreapp2.1\c_sharp_project_back_end.pdb
